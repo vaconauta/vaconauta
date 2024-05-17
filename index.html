@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h4>Calculadora</h4>
+        <div class="hist">
+            <input id="historico" type="text" readonly>
+        </div>
+        <div class="display">
+            <button class="btn ac" onclick="clearTela()">AC</button>
+            <button class="btn ac" onclick="deleteLast()">DEL</button>
+            <input id="tela" type="text" placeholder="0" readonly>
+        </div>
+        <div id="memoria">
+            <button class="btn" onclick="memoriaAdd()">M+</button>
+            <button class="btn" onclick="memoriaSub()">M-</button>
+            <button class="btn" onclick="memoriaRec()">MR</button>
+            <button class="btn" onclick="memoriaClear()">MC</button>
+            <button class="btn" onclick="porcentagem()">%</button>
+        </div>
+        <div class="botões"> 
+            
+            <div id="botões0-9-vq">
+                <button class="btn" onclick="nmr('7')">7</button>
+                <button class="btn" onclick="nmr('8')">8</button>
+                <button class="btn" onclick="nmr('9')">9</button>
+                <button class="btn" onclick="nmr('4')">4</button>
+                <button class="btn" onclick="nmr('5')">5</button>
+                <button class="btn" onclick="nmr('6')">6</button>
+                <button class="btn" onclick="nmr('1')">1</button>
+                <button class="btn" onclick="nmr('2')">2</button>
+                <button class="btn" onclick="nmr('3')">3</button>
+                <button class="btn" onclick="nmr('0')">0</button>
+                <button class="btn" onclick="nmr(',')">,</button>
+                <button onclick="calculateResult('=')" class="btn igual" id="bntq">=</button>
+            </div>
+            <div id="operadores">
+                <button class="operador btn" onclick="operador('÷')">÷</button>
+                <button class="operador btn" onclick="operador('×')">×</button>
+                <button class="operador btn" onclick="operador('-')">-</button>
+                <button class="operador btn" onclick="operador('+')">+</button>
+            </div>
+            
+        </div>
+       
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
